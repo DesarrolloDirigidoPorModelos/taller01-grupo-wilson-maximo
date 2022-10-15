@@ -2,8 +2,6 @@
 /*This code was generated using the UMPLE 1.31.1.5860.78bb27cc6 modeling language!*/
 
 
-import proyecto.Medidor;
-
 import java.util.*;
 
 // line 1 "clases.ump"
@@ -97,7 +95,7 @@ public class Cliente
     return 0;
   }
   /* Code from template association_AddManyToOne */
-  public Medidor addMedidor(String aMarca, String aDireccion, BigDecimal aCosto)
+  public Medidor addMedidor(String aMarca, String aDireccion, double aCosto)
   {
     return new Medidor(aMarca, aDireccion, aCosto, this);
   }
@@ -106,7 +104,7 @@ public class Cliente
   {
     boolean wasAdded = false;
     if (medidors.contains(aMedidor)) { return false; }
-    proyecto.Cliente existingCliente = aMedidor.getCliente();
+    Cliente existingCliente = aMedidor.getCliente();
     boolean isNewCliente = existingCliente != null && !this.equals(existingCliente);
     if (isNewCliente)
     {

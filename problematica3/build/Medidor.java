@@ -2,7 +2,6 @@
 /*This code was generated using the UMPLE 1.31.1.5860.78bb27cc6 modeling language!*/
 
 
-import proyecto.Cliente;
 
 // line 8 "clases.ump"
 public class Medidor
@@ -15,7 +14,7 @@ public class Medidor
   //Medidor Attributes
   private String marca;
   private String direccion;
-  private BigDecimal costo;
+  private double costo;
 
   //Medidor Associations
   private Cliente cliente;
@@ -24,7 +23,7 @@ public class Medidor
   // CONSTRUCTOR
   //------------------------
 
-  public Medidor(String aMarca, String aDireccion, BigDecimal aCosto, Cliente aCliente)
+  public Medidor(String aMarca, String aDireccion, double aCosto, Cliente aCliente)
   {
     marca = aMarca;
     direccion = aDireccion;
@@ -56,7 +55,7 @@ public class Medidor
     return wasSet;
   }
 
-  public boolean setCosto(BigDecimal aCosto)
+  public boolean setCosto(double aCosto)
   {
     boolean wasSet = false;
     costo = aCosto;
@@ -74,7 +73,7 @@ public class Medidor
     return direccion;
   }
 
-  public BigDecimal getCosto()
+  public double getCosto()
   {
     return costo;
   }
@@ -118,8 +117,8 @@ public class Medidor
   {
     return super.toString() + "["+
             "marca" + ":" + getMarca()+ "," +
-            "direccion" + ":" + getDireccion()+ "]" + System.getProperties().getProperty("line.separator") +
-            "  " + "costo" + "=" + (getCosto() != null ? !getCosto().equals(this)  ? getCosto().toString().replaceAll("  ","    ") : "this" : "null") + System.getProperties().getProperty("line.separator") +
+            "direccion" + ":" + getDireccion()+ "," +
+            "costo" + ":" + getCosto()+ "]" + System.getProperties().getProperty("line.separator") +
             "  " + "cliente = "+(getCliente()!=null?Integer.toHexString(System.identityHashCode(getCliente())):"null");
   }
 }

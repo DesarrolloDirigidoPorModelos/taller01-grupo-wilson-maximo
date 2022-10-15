@@ -95,7 +95,7 @@ public class Cliente
     return 0;
   }
   /* Code from template association_AddManyToOne */
-  public Medidor addMedidor(String aMarca, String aDireccion, BigDecimal aCosto)
+  public Medidor addMedidor(String aMarca, String aDireccion, Double aCosto)
   {
     return new Medidor(aMarca, aDireccion, aCosto, this);
   }
@@ -174,7 +174,7 @@ public class Cliente
 
   public String toString()
   {
-    return super.toString() + "["+
+    return "["+
             "identificacion" + ":" + getIdentificacion()+ "," +
             "nombres" + ":" + getNombres()+ "]";
   }

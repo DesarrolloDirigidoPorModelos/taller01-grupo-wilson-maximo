@@ -9,5 +9,5 @@ class Medidor
 {
   marca;
   direccion;
-  BigDecimal costo;
+  Double costo;
 }
