@@ -1,0 +1,13 @@
+class Cliente
+{
+  identificacion;
+  nombres;
+  1 -- * Medidor;
+}
+
+class Medidor
+{
+  marca;
+  direccion;
+  BigDecimal costo;
+}
